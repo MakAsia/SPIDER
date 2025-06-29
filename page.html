@@ -1,0 +1,155 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Gift</title>
+  <style>
+    body {
+  background: #000; /* black background for contrast */
+  color: #0f0; /* bright green text */
+  font-family: 'Share Tech Mono', monospace;
+  text-align: center;
+  padding: 120px 50px 50px 50px; /* increased top padding to move content down */
+  animation: partyLights 10s infinite alternate;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Move the heading down a bit */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 50px; /* more space below heading */
+  text-shadow: 0 0 15px #0f0;
+  position: relative;
+  top: 40px; /* shift down */
+}
+
+/* Move the gif down */
+img {
+  max-width: 90vw;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 0 30px #0f0;
+  animation: floatUpDown 6s ease-in-out infinite;
+  position: relative;
+  top: 40px; /* shift down */
+}
+
+/* Candles container stays fixed at bottom center */
+.candles {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 25px;
+  z-index: 2;
+}
+
+    /* Colored party light flicker background */
+    @keyframes partyLights {
+      0%, 100% { background-color: #000000; }
+      20% { background-color: #ff0066; }
+      40% { background-color: #00ccff; }
+      60% { background-color: #ffcc00; }
+      80% { background-color: #33ff33; }
+    }
+    body {
+      animation: partyLights 10s infinite alternate;
+      background: #000; /* black background for contrast */
+      color: #0f0; /* bright green text */
+      font-family: 'Share Tech Mono', monospace;
+      text-align: center;
+      padding: 50px;
+      position: relative;
+      overflow-x: hidden;
+      overflow-y: auto;
+      min-height: 100vh;
+    }
+
+    /* Candles container */
+    .candles {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 25px;
+      z-index: 2;
+    }
+
+    /* Single candle shape */
+    .candle {
+      position: relative;
+      width: 15px;
+      height: 60px;
+      background: linear-gradient(to top, #ffe6cc, #ffcc99);
+      border-radius: 5px;
+      box-shadow: 0 0 6px #ffcc99;
+    }
+
+    /* Candle flame */
+    .flame {
+      position: absolute;
+      top: -25px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 12px;
+      height: 25px;
+      background: radial-gradient(circle at 50% 40%, #ffdd00 30%, transparent 70%);
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      filter: drop-shadow(0 0 6px #ffdd00);
+      animation: flicker 1.2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(1) translateY(0); opacity: 1; }
+      50% { transform: translateX(-50%) scale(1.1) translateY(-3px); opacity: 0.8; }
+      100% { transform: translateX(-50%) scale(1) translateY(0); opacity: 1; }
+    }
+
+    h1 {
+      margin-top: 100px; /* moved text down */
+      margin-bottom: 40px;
+      text-shadow: 0 0 15px #0f0;
+      position: relative;
+      z-index: 10;
+    }
+
+    img {
+      margin-top: 40px; /* moved gif down */
+      max-width: 90vw;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 0 30px #0f0;
+      animation: floatUpDown 6s ease-in-out infinite;
+      position: relative;
+      z-index: 10;
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+        filter: drop-shadow(0 0 10px #0f0);
+      }
+      50% {
+        transform: translateY(-25px);
+        filter: drop-shadow(0 0 20px #0f0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="candles">
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+    <div class="candle"><div class="flame"></div></div>
+  </div>
+
+  <h1>HAPPY BIRTHDAY BATAAAAAAAAA</h1>
+  <img src="ay.gif" alt="Birthday Gif" />
+</body>
+</html>

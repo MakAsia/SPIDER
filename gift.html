@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cute Gift - Friendly Slap?</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Patrick Hand', cursive;
+      color: #5a2a27;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      background: #fff1f0;
+      padding: 20px 30px;
+      border-radius: 25px;
+      box-shadow: 0 8px 15px rgba(255, 105, 97, 0.3);
+      max-width: 350px;
+      line-height: 1.4;
+      user-select: none;
+      animation: bounce 2s infinite;
+      cursor: default;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+        color: #5a2a27;
+        text-shadow: none;
+      }
+      50% {
+        transform: translateY(-10px);
+        color: #ff5964;
+        text-shadow: 0 0 10px #ff5964;
+      }
+    }
+
+    .emoji {
+      font-size: 3rem;
+      margin-top: 15px;
+      animation: floatUpDown 3s ease-in-out infinite;
+    }
+
+    @keyframes floatUpDown {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    /* Gift image styling */
+    img {
+      margin-top: 30px;
+      max-width: 320px;
+      width: 90vw;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(255, 105, 97, 0.6);
+      animation: floatUpDown 6s ease-in-out infinite;
+    }
+  </style>
+</head>
+<body>
+  <h2>Hey there! Feeling cheeky? Want a little <em>friendly</em> slap? 😉💥</h2>
+  <div class="emoji">👋💖</div>
+  <img src="assets/gift.jpg" alt="Gift" />
+  <audio autoplay loop>
+  <source src="assets/music.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>
